@@ -12,12 +12,11 @@ packages:
   - nginx
   - ufw
 
-
 runcmd:
   - sed -i 's/^#\(Storage=auto\)/\1/' /etc/systemd/journald.conf
   - sed -i -e '/^PermitRootLogin/s/^.*$/PermitRootLogin no/' /etc/ssh/sshd_config
   - systemctl restart ssh
   - systemctl restart systemd-journald
-
-
-
+  - sudo ufw enable
+  - sudo ufw allow 80/tcp
+  - sudo ufw allow ssh
