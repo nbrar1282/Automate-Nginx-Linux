@@ -13,3 +13,5 @@ This public Git repository contains configuration files and scripts for setting 
   - `hello.conf`: Symbolic link to hello.conf
 - `/etc/systemd/system/`:
   - `hello-server.service`: Systemd service for hello-server
+ 
+**Note** : Copy & paste the contents of cloud-config.yaml file while creating the new servers web1 and web2 in digital ocean. 
